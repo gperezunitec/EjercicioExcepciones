@@ -8,7 +8,7 @@ namespace EjercicioExcepciones
 {
     public class Operaciones
     {
-
+        
         public double numero1 {  get; set; }
         public double numero2 { get; set; }
 

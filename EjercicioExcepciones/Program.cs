@@ -1,8 +1,11 @@
 ﻿
 
+using EjercicioExcepciones;
+
 try
 {
-    double n1, n2, division;
+    Operaciones operaciones = new Operaciones();
+    double n1, n2, suma, resta, multiplicaion, division;
 
 
     Console.Write("Ingrese primer numero: ");
@@ -11,9 +14,17 @@ try
     Console.Write("Ingrese segundo numero: ");
     n2 = Convert.ToInt32(Console.ReadLine());
 
-    division = n1 / n2;
+    
+    suma=operaciones.suma(n1, n2);
+    resta=operaciones.resta(n1, n2);
+    multiplicaion=operaciones.multiplicacion(n1, n2);
+    division=operaciones.division(n1, n2);
+
+    Console.WriteLine($"La suma es:{suma}");
+    Console.WriteLine($"La resta es:{resta}");
+    Console.WriteLine($"La multiplicacion es:{multiplicaion}");
     Console.WriteLine($"La division es:{division}");
-    Console.WriteLine($"La division es:{division + 5}");
+ 
 
 }
 catch (Exception ex)
